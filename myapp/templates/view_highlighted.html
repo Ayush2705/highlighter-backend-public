@@ -1,0 +1,17 @@
+<!-- view_highlighted_text.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Highlighted Text</title>
+</head>
+<body>
+    <h1>Highlighted Text</h1>
+    <ul>
+        {% for highlighted_text in highlighted_texts %}
+        <li>{{ highlighted_text.text }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+``

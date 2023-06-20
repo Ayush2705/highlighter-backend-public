@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to My Django Web App</h1>
+    <h1>This is the Dashboard for the Highlighting Extension</h1>
+    <p>Hello, {{ username }}!</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" name="logout" value="Logout">
+        <input type="submit" name="view_highlighted_text" value="View Highlighted Text">
+    </form>
+    {% if highlighted_texts %}
+    <h2>Highlighted Texts:</h2>
+    <ul>
+    {% for highlighted_text in highlighted_texts %}
+        <li>{{ highlighted_text.text }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+</body>
+</html>
